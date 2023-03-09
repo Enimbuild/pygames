@@ -1,23 +1,24 @@
-import pygame
-clock = pygame.time.Clock()
+import pygame, sys
 
-# Initialize Pygame
+
+
+#General setup
 pygame.init()
+clock = pygame.time.Clock() # how fast the game runs
 
-# Set the dimensions of the surface
-surface = pygame.display.set_mode((600,600))
+#Create the display surface
+screen = pygame.display.set_mode((600,600)) # tuple
 
 
 
-# Fill the surface with a color (in this case, white)
-surface.fill((255, 0, 0))
-# Wait for the user to close the window
-
-while True:
+while True:   # while loop checks for inputs from user
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            
-        # Quit Pygame
-            pygame.quit()
-        
-            clock.tick(60)
+            pygame.quit()  #opposite of pygame.init()
+            sys.exit()
+
+    screen.fill((0,0,255))  # r,g,b from 0, 255
+
+
+    pygame.display.flip() # draws the game
+    clock.tick(60)        # frame rate 60 milli sec. speed of animation
