@@ -17,7 +17,7 @@ while True:   # while loop checks for inputs from user
             pygame.quit()  #opposite of pygame.init()
             sys.exit()
 
-    screen.fill((0,0,255))  # r,g,b from 0, 255
+    screen.fill((255,0,255))  # r,g,b from 0, 255
 
 
     pygame.display.flip() # draws the game
